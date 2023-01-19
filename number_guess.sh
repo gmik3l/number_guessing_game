@@ -20,6 +20,7 @@ DISPLAY() {
     #get best game (guess)
     BEST_GUESS=$($PSQL "select min(guesses) from games where user_id = '$USER_ID'")
 
+    #By Mik3l
     echo -e "\nWelcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GUESS guesses."
   else
     #if user_name not present in db
